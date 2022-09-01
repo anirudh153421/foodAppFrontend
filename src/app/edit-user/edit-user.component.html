@@ -1,0 +1,39 @@
+<p>edit-user works!</p>
+<div class="container">
+    <h3>edit User </h3>
+    <form #editData="ngForm" (ngSubmit)="editUser(editData)">
+        <div class="form-group">
+            <label for="name">Name</label>
+          <input type="text" 
+          class="form-control" 
+          id="name"
+          name="name"
+          #name="ngModel"
+          [(ngModel)]="user.name"
+          >
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" 
+            class="form-control" 
+            id="email"
+            name="email"
+            #email="ngModel"
+            ngModel
+            [(ngModel)]="user.email"
+            >
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="text" 
+            class="form-control" 
+            id="password"
+            name="password"
+            #password="ngModel"
+            ngModel
+            [(ngModel)]="user.password"
+            >
+          </div>
+       <button type="submit" class="btn btn-primary" >Update</button>
+      </form>
+</div>

@@ -1,0 +1,53 @@
+<p>add-manager works!</p>
+<div class="container">
+    <button class="btn btn-secondary" style="margin-left: 1200px;" routerLink="/adminhome">Home</button>
+    <h3>Manager Registration</h3>
+    <form [formGroup]="mgrForm" (ngSubmit)="addManager()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+          placeholder="Enter Manager Name"
+          name="name"
+         formControlName="name"
+          >
+          <span *ngIf="mgrForm.get('name')?.invalid && mgrForm.get('name')?.touched" style="color: red;">Name Is Mandatory</span>
+        </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+              placeholder="Enter Manager email"
+              name="email"
+              formControlName="email"
+              >
+              <span *ngIf="mgrForm.get('email')?.invalid && mgrForm.get('email')?.touched" style="color: red;">email Is Mandatory</span>
+            </div>
+
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="password" class="form-control" id="pass"
+          placeholder="Enter Manager Password"
+          name="password"
+          formControlName="password">
+              <span *ngIf="mgrForm.get('password')?.invalid && mgrForm.get('password')?.touched" style="color: red;">password Is Mandatory</span>
+        </div>
+          <div class="form-group">
+            <label for="branch">Branch</label>
+            <input type="text" class="form-control" id="branch" aria-describedby="emailHelp"
+            placeholder="Enter Manager Branch"
+            name="branch"
+            formControlName="branch"
+            >
+                <span *ngIf="mgrForm.get('branch')?.invalid && mgrForm.get('branch')?.touched" style="color: red;">Branch Is Mandatory</span>
+          </div>
+          <div class="form-group">
+            <label for="id">admin ID</label>
+            <input type="text" class="form-control" id="id" aria-describedby="emailHelp"
+            placeholder="Enter Manager's admin ID"
+            name="id"
+            formControlName="id"
+            >
+                <span *ngIf="mgrForm.get('id')?.invalid && mgrForm.get('id')?.touched" style="color: red;">Admin ID Is Mandatory</span>
+          </div>
+        <button type="submit" [disabled]="!mgrForm.valid" class="btn btn-primary">Submit</button>
+      </form>
+    </div>

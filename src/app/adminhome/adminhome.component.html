@@ -1,0 +1,55 @@
+<p>adminhome works!</p>
+<div class="container">
+    <h3> Home</h3>
+    <div >
+      <h6 style="background-color: black; margin-left: 900px; color: white;">Logged In as {{entity}}</h6>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/saveadmin" href="#">add admin<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/addorder" href="#">add order</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" routerLink="/addproduct" href="#">add product</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" routerLink="/addmanager" href="#">add manager</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" routerLink="/addstaff" href="#">add staff</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" routerLink="/adduser" href="#">add customer</a>
+              </li>
+              <button class="btn btn-secondary" style="margin-left: 400px;">
+                <li class="nav-item active">
+                  <a class="nav-link" onclick="logout()" href="#">logout</a>
+                </li>
+              </button>
+          </ul>
+        </div>
+      </nav>
+      <div class="list-group" style="padding-left: 800px; padding-top: 50px;">
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+          other links
+        </a>
+        <a href="#" class="list-group-item list-group-item-action" routerLink="/admindetails">Admin Details</a>
+        <a href="#" class="list-group-item list-group-item-action" routerLink="/displaymanagers">Manager Details</a>
+        <a href="#" class="list-group-item list-group-item-action" routerLink="/displaystaff">staff Details</a>
+        <a href="#" class="list-group-item list-group-item-action" routerLink="/displayproducts">products available in pantry</a>
+        <a href="#" class="list-group-item list-group-item-action" routerLink="/addmenu">create Menu</a>
+        <a href="#" class="list-group-item list-group-item-action" routerLink="/displayorders">Display Orders</a>
+        <a href="#" class="list-group-item list-group-item-action" routerLink="/showstaffbymid">View Staff Reporting to you</a>
+        <a href="#" class="list-group-item list-group-item-action" routerLink="/userdetails">User Details</a>
+        
+        
+      </div>
+</div>

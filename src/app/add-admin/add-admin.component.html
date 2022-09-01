@@ -1,0 +1,36 @@
+<p>add-admin works!</p>
+
+<div class="container">
+  <button class="btn btn-secondary" style="margin-left: 1200px;" routerLink="/adminhome">Home</button>
+    <h3>Admin Registration</h3>
+    <form [formGroup]="adminForm" (ngSubmit)="addAdmin()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+          placeholder="Enter your name"
+          name="name"
+         formControlName="name"
+          >
+          <span *ngIf="adminForm.get('name')?.invalid && adminForm.get('name')?.touched" style="color: red;">Name Is Mandatory</span>
+        </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+              placeholder="Enter your email"
+              name="email"
+              formControlName="email"
+              >
+              <span *ngIf="adminForm.get('email')?.invalid && adminForm.get('email')?.touched" style="color: red;">email Is Mandatory</span>
+            </div>
+
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="password" class="form-control" id="pass"
+          placeholder="Enter your password"
+          name="password"
+          formControlName="password">
+              <span *ngIf="adminForm.get('password')?.invalid && adminForm.get('password')?.touched" style="color: red;">password Is Mandatory</span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>

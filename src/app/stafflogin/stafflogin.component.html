@@ -1,0 +1,32 @@
+<p>stafflogin works!</p>
+<div class="container">
+  <button class="btn btn-secondary" style="margin-left: 1200px;" routerLink="/home">Home</button>
+    <h3>Staff Login</h3>
+    <form [formGroup]="staffLogin" (ngSubmit)="getCredentials()">
+        
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+              placeholder="Enter your email"
+              name="email"
+              formControlName="email"
+              >
+              <span *ngIf="staffLogin.get('email')?.invalid && staffLogin.get('email')?.touched" style="color: red;">email Field should not be empty</span>
+            </div>
+
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="password" class="form-control" id="pass"
+          placeholder="Enter your password"
+          name="password"
+          formControlName="password">
+              <span *ngIf="staffLogin.get('password')?.invalid && staffLogin.get('password')?.touched" style="color: red;">password Field should not be empty</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    
+    <div>
+      
+    </div>

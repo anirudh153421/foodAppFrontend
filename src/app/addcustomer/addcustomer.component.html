@@ -1,0 +1,37 @@
+<p>addcustomer works!</p>
+<div class="container">
+    <h3>Customer Registration</h3>
+    <form [formGroup]="userForm" (ngSubmit)="addUser()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+          placeholder="Enter your name"
+          name="name"
+         formControlName="name"
+          >
+          <!-- <span *ngIf="name?.invalid && name?.touched" style="color: red;">Name Field should not be empty</span> -->
+        </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+              placeholder="Enter your email"
+              name="email"
+              formControlName="email"
+              >
+              <!-- <span *ngIf="email?.invalid && email?.touched" style="color: red;">email Field should not be empty</span> -->
+            </div>
+
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="password" class="form-control" id="pass"
+          placeholder="Enter your password"
+          name="password"
+          formControlName="password">
+              <!-- <span *ngIf="password?.invalid && password?.touched" style="color: red;">password Field should not be empty</span> -->
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <div>
+        <button class="btn btn-secondary" style="margin-left: 900px;" routerLink="/adminhome">back</button>
+      </div>
+    </div>

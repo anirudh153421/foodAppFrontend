@@ -1,0 +1,28 @@
+<p>managerlogin works!</p>
+<div class="container">
+  <button class="btn btn-secondary" style="margin-left: 1200px;" routerLink="/home">Home</button>
+    <h3>Manager Login</h3>
+    <form [formGroup]="managerLogin" (ngSubmit)="getCredentials()">
+        
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+              placeholder="Enter your email"
+              name="email"
+              formControlName="email"
+              >
+              <span *ngIf="managerLogin.get('email')?.invalid && managerLogin.get('email')?.touched" style="color: red;">Email is Mandatory</span>
+            </div>
+
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="password" class="form-control" id="pass"
+          placeholder="Enter your password"
+          name="password"
+          formControlName="password">
+              <span *ngIf="managerLogin.get('password')?.invalid && managerLogin.get('password')?.touched" style="color: red;">password is Mandatory</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
